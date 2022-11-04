@@ -1,0 +1,24 @@
+{
+  "name": "over-engineered",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test",
+    "coverage": "npx hardhat coverage",
+    "deploy:dev": "npx hardhat run scripts/1-Todo-deploy.js && npx hardhat run scripts/2-Coins-deploy.js",
+    "deploy:prod": "npx hardhat run scripts/1-Todo-deploy.js --network matic && npx hardhat run scripts/2-Coins-deploy.js --network matic"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "hardhat": "^2.12.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "fs-extra": "^10.1.0",
+    "solidity-coverage": "^0.8.2"
+  }
+}

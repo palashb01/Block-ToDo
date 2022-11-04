@@ -1,0 +1,75 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/palashb/Coding/block-to-do/contract/contracts/Coins.sol": {
+      "lastModificationDate": 1667494927980,
+      "contentHash": "d652a346bcd3cbe6116b071a7c1f22c3",
+      "sourceName": "contracts/Coins.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Coins"
+      ]
+    },
+    "/home/palashb/Coding/block-to-do/contract/contracts/Todo.sol": {
+      "lastModificationDate": 1667495475601,
+      "contentHash": "ed24294eb5b2ce2b23ae538e60d2206c",
+      "sourceName": "contracts/Todo.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Todo"
+      ]
+    }
+  }
+}

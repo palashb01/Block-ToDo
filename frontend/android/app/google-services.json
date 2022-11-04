@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "501189927069",
+    "project_id": "block-todo",
+    "storage_bucket": "block-todo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501189927069:android:086d8039b758883ec4f474",
+        "android_client_info": {
+          "package_name": "com.sachindapkara.over_engineered"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501189927069-4ieiobbpojnkfu7phuvncf6m9levt58c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sachindapkara.over_engineered",
+            "certificate_hash": "768767c7330e0e8f429afe0aefaf2737afce1d87"
+          }
+        },
+        {
+          "client_id": "501189927069-8go6sbd28bdoncj3kl51aiv29pobhpk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwmRK0j7DUdVHGwUGgaLbwfKnjG0pi3o8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501189927069-8go6sbd28bdoncj3kl51aiv29pobhpk6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "501189927069-m9avgeoabu1m0ke4ht2hff3t8rdfd5cr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sachindapkara.overEngineered"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
