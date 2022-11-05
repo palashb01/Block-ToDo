@@ -64,7 +64,7 @@ The best way to better explore all the features of the **Block ToDo** is to fork
 - Backend is developed using [Nodejs](https://nodejs.org/en/) and [Express](https://expressjs.com/):
   - JWT as a stateless authentication mechanisms for users and providers
   - MongoDB and pocketbase to serve simultaneously as database
-  - nHost \
+  - nHost 
  <img alt="BlockTodo logo" src="./public/Images/nhost.png" width="560px"/> 
   - Bcrypt to encrypt passwords and auth
 
