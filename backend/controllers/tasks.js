@@ -34,7 +34,7 @@ exports.addtask = async (req, res) => {
               iscompleted: false,
               datecreated: dates,
               datecompleted: "00-00-0000",
-              dealine: req.body.deadline,
+              deadline: req.body.deadline,
             },
           },
         })
@@ -74,8 +74,8 @@ exports.addtask = async (req, res) => {
   } catch (err) {
     return res.status(400).json({
       message: err.message,
-    });
-  } finally {
+    });}
+   finally {
     const res = await contract.methods.createTask(wallet, req.body.task).send({
       from: "0x068Cea44Af30066b1f8dE4AbAc12a749d9ddaE26",
     });
@@ -137,7 +137,7 @@ exports.complete = async (req, res) => {
     deadlines.tasks.forEach(async (element) => {
       if (element.id == req.body.id) {
         const date = new Date();
-        if (element.deadline > date) {
+        if (Date.parse(element.deadline) > date) {
           await user
             .findOne({ email: req.body.email })
             .updateOne({ $inc: { coins: 10 } });
