@@ -135,7 +135,7 @@ exports.complete = async (req, res) => {
     );
     const deadlines = await tasks_array.findOne({ email: req.body.email });
     deadlines.tasks.forEach(async (element) => {
-      if (element.id == req.body.id) {
+      if (element.id == req.body.id && element.iscompleted==false) {
         const date = new Date();
         if (Date.parse(element.deadline) > date) {
           await user
