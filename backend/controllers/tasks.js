@@ -125,6 +125,32 @@ exports.deletetask = async (req, res) => {
 
 exports.complete = async (req, res) => {
   try {
+
+    const deadlines = await tasks_array.findOne({ email: req.body.email });
+    deadlines.tasks.forEach(async (element) => {
+      if (element.id == req.body.id) {
+        const date = new Date();
+        if(element.iscompleted == false){
+
+          if (Date.parse(element.deadline) > date) {
+            await user
+              .findOne({ email: req.body.email })
+              .updateOne({ $inc: { coins: 10 } });
+            await tasks_array
+              .findOne({ email: req.body.email })
+              .updateOne({ $inc: { coins: 10 } });
+          } else {
+            await user
+              .findOne({ email: req.body.email })
+              .updateOne({ $inc: { coins: -10 } });
+            await tasks_array
+              .findOne({ email: req.body.email })
+              .updateOne({ $inc: { coins: -10 } });
+          }
+        }
+       
+      }
+    });
     await tasks_array.findOne({ email: req.body.email }).updateOne(
       { "tasks.id": req.body.id },
       {
@@ -133,27 +159,6 @@ exports.complete = async (req, res) => {
         },
       }
     );
-    const deadlines = await tasks_array.findOne({ email: req.body.email });
-    deadlines.tasks.forEach(async (element) => {
-      if (element.id == req.body.id && element.iscompleted==false) {
-        const date = new Date();
-        if (Date.parse(element.deadline) > date) {
-          await user
-            .findOne({ email: req.body.email })
-            .updateOne({ $inc: { coins: 10 } });
-          await tasks_array
-            .findOne({ email: req.body.email })
-            .updateOne({ $inc: { coins: 10 } });
-        } else {
-          await user
-            .findOne({ email: req.body.email })
-            .updateOne({ $inc: { coins: -10 } });
-          await tasks_array
-            .findOne({ email: req.body.email })
-            .updateOne({ $inc: { coins: -10 } });
-        }
-      }
-    });
     return res.status(202).json({
       message: "success",
     });
